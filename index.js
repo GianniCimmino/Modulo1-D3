@@ -104,34 +104,54 @@ for(let i = 0; i <= 15; i++)
 //ESERCIZI EXTRA NON OBBLIGATORI
 
 /* ESERCIZIO EXTRA 1
-  Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
+  Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione
+   sia uguale a 8.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let q1 = 8
+let q1 = 5
 let q2 = 5
 
-if (q1 === 8 || q2 === 8){
+if (q1 === 8 || q2 === 8 || q1 + q2 === 8 || q1 - q2 === 8){
   console.log("Uno dei numeri interi è 8")
 }
 else {
   console.log("Uno dei numeri interi non è 8")
 }
 
-
-
 /* ESERCIZIO EXTRA 2
 Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
-C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
+C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita 
+(altrimenti la spedizione ha un costo fisso pari a 10).
 Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let r1 = 20
+let r2 = 30
+
+let totalShoppingCart = r1 + r2 
+
+let blackFriday = totalShoppingCart / 100 * 20
+
+totalShoppingCart = totalShoppingCart - blackFriday
+
+console.log(totalShoppingCart)
+
+if (totalShoppingCart >= 50) {
+  console.log("Lei ha diritto alla spedizione gratuita!")
+}
+else {
+  console.log("Purtroppo non ha diritto alla spedizione gratuita, le saranno addebitati 10 euro per la spedizione.")
+}
+
+
 /* ESERCIZIO EXTRA 3
   Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
-  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
+  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente,
+  se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -144,6 +164,29 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let gender = "Female"
+let isMale = gender == 'Male' ? 'Male' : 'Female'
+
+console.log(isMale)
+
+
 /* ESERCIZIO EXTRA 5
-  Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
+  Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!),
+  stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe,
+  stampa "FizzBuzz".
 */
+
+for (let i = 0; i <= 100; i++) {
+
+  if (i % 3) {
+    console.log("Fizz")
+  }
+
+  else if (i % 5){
+    console.log("Buzz")
+  }
+  if (i % 3 && i % 5) {
+    console.log("FizzBuzz")
+  }
+}
+
